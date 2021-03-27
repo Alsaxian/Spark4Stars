@@ -1,4 +1,2 @@
-.idea
-*.iml
-/project/
-/target/
+/build.sbt
+/pom.xml
