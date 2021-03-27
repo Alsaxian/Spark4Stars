@@ -1,7 +1,7 @@
 # Spark for stars
 Author : YANG XIAN  
 
-In this project we want to develop an algorithm, which can partition a big amount of huge files of stars (approx. 5G each) stored in a Hadoop File System on a multi-server cluster, into smaller files (128M) with the requirement that stars near to each other should stay together in the same ouput file, in order to simplify the downstream use and processing of these astronomic data.  
+In this project we want to develop an algorithm, which can partition a big amount of huge files of stars (approx. 5G each), stored in a Hadoop Distributed File System on a multi-server cluster, into smaller files (128M) with the requirement that stars near to each other should stay together in the same ouput file, in order to simplify the downstream use and processing of these astronomic data.  
   
 Each star (record) includes a series of attributes orginally, among others the Right Ascension (`RA`) and the Declination (`Decl`). See  
 https://de.wikipedia.org/wiki/%C3%84quatoriales_Koordinatensystem
@@ -76,7 +76,7 @@ To verify the calculated region boundaries, a intermediate `main` function can p
  &ensp; &ensp; 
  &ensp; &ensp; 
   
-## II. Set a grid and partition the region
+## II. Set up a grid and partition the region
 
 Now that we have the boundaries coordinates of the celestial region, we are interested in partitioning the region into small rectangle cases. Considering that the whole file has a size about 5G, if we want to have outputs of 128M we'll need at least 40 cases.   
   
